@@ -1,3 +1,5 @@
+#그림 그려가며 구현.
+#디버깅의 중요성
 from collections import deque
 
 cube = [[[0]* 3 for _ in range(3)] for _ in range(6)]
