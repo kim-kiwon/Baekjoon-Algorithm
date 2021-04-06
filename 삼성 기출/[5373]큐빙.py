@@ -94,8 +94,8 @@ for _ in range(t):
         elif val[0] == 'B':
             if val[1] == '+':
                 temp1, temp2, temp3 = cube[3][0][2], cube[3][1][2], cube[3][2][2]
-                cube[3][0][2], cube[3][1][2], cube[3][2][2] = cube[4][2][0], cube[4][2][1], cube[4][2][2]
-                cube[4][2][0], cube[4][2][1], cube[4][2][2] = cube[2][2][0], cube[2][1][0], cube[2][0][0]
+                cube[3][0][2], cube[3][1][2], cube[3][2][2] = cube[4][2][2], cube[4][2][1], cube[4][2][0]
+                cube[4][2][0], cube[4][2][1], cube[4][2][2] = cube[2][0][0], cube[2][1][0], cube[2][2][0]
                 cube[2][0][0], cube[2][1][0], cube[2][2][0] = cube[0][0][2], cube[0][0][1], cube[0][0][0]
                 cube[0][0][0], cube[0][0][1], cube[0][0][2] = temp1, temp2, temp3
                 cube[5] = c_rotate(cube[5])
@@ -103,8 +103,8 @@ for _ in range(t):
                 temp1, temp2, temp3 = cube[3][0][2], cube[3][1][2], cube[3][2][2]
                 cube[3][0][2], cube[3][1][2], cube[3][2][2] = cube[0][0][0], cube[0][0][1], cube[0][0][2]
                 cube[0][0][0], cube[0][0][1], cube[0][0][2] = cube[2][2][0], cube[2][1][0], cube[2][0][0]
-                cube[2][0][0], cube[2][1][0], cube[2][2][0] = cube[4][2][2], cube[4][2][1], cube[4][2][0]
-                cube[4][2][0], cube[4][2][1], cube[4][2][2] = temp1, temp2, temp3
+                cube[2][0][0], cube[2][1][0], cube[2][2][0] = cube[4][2][0], cube[4][2][1], cube[4][2][2]
+                cube[4][2][0], cube[4][2][1], cube[4][2][2] = temp3, temp2, temp1
                 cube[5] = ac_rotate(cube[5])
     for i in range(3):
         result = ''.join(cube[0][i])
